@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { NgLoadingIndicatorComponent } from './ng-loading-indicator.component';
+import { LoadingIndicatorComponent } from './components/loading-indicator.component';
 
 @NgModule({
   imports: [
   ],
-  declarations: [NgLoadingIndicatorComponent],
-  exports: [NgLoadingIndicatorComponent]
+  declarations: [ LoadingIndicatorComponent ],
+  exports: [ LoadingIndicatorComponent ]
 })
 export class NgLoadingIndicatorModule { }
