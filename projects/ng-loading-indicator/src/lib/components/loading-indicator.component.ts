@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 import { ModalWindowComponent } from '@browninglogic/ng-modal';
 
 @Component({
-  selector: 'loading-indicator',
+  selector: 'nli-loading-indicator',
   templateUrl: './loading-indicator.component.html',
   styleUrls: ['./loading-indicator.component.css']
 })
