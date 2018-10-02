@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
+import { ModalManagerModule } from '@browninglogic/ng-modal';
 import { LoadingIndicatorComponent } from './components/loading-indicator.component';
 
 @NgModule({
-  imports: [
-  ],
+  imports: [ ModalManagerModule ],
   declarations: [ LoadingIndicatorComponent ],
   exports: [ LoadingIndicatorComponent ]
 })
