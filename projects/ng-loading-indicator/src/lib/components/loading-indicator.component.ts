@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, Input } from '@angular/core';
 import { LoadingIndicatorService } from '../services/loading-indicator.service';
 import { Subscription } from 'rxjs';
 import { ModalWindowComponent } from '@browninglogic/ng-modal';
@@ -10,7 +10,14 @@ import { ModalWindowComponent } from '@browninglogic/ng-modal';
 })
 export class LoadingIndicatorComponent implements OnInit, OnDestroy {
   constructor(private loadingIndicatorService : LoadingIndicatorService) {}
-
+  /** Custom CSS class(es) to apply to the modal*/
+  @Input() modalClass = '';
+  /** Custom CSS class(es) to apply to the overlay*/
+  @Input() overlayClass = '';
+  /** Custom CSS class(es) to apply to the loading message*/
+  @Input() loadingMessageClass = '';
+  /** Custom CSS class(es) to apply to the spinner*/
+  @Input() spinnerClass = '';
   @ViewChild('loadingIndicatorModal') loadingIndicatorModal : ModalWindowComponent;
   private _loadingMessage : string;
   private subLoadStarted : Subscription;

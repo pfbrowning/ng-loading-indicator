@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/* In order to set basic styles that aren't already applied by
+the library, simply define your custom styles in a CSS class and
+then bind that class name to the corresponding input property */
+.customLoadingMessage {
+    font-style:italic;
+}
+/* Use a more specific CSS selector in order to 
+override styles which are already applied by the
+library, such as changing the color of the spinner*/
+div.spinner.customSpinner {
+    border-top-color:green;
+}
+/* Override the loading message header margin */
+h1.loadingMessage.customLoadingMessage {
+    margin:15px;
+}
+/* Override the border color of the loading indicator modal */
+div.modalWindow.customModal {
+    border-color: black;
+}
+/* Override the modal overlay with a higher opacity */
+div.modalOverlay.customOverlay {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Basic styling for our simple demo form */
+fieldset {
+    width:560px;
+    border:none;
+    line-height: 28px;
+}
+label {
+    clear: both;
+    float: left;
+    width: 470px;
+}
+input {
+    float: right;
+}

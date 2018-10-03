@@ -10,6 +10,8 @@ import { timer } from 'rxjs';
 export class AppComponent {
   constructor(private loadingIndicatorService: LoadingIndicatorService) {}
 
+  public applyStyles: boolean;
+
   public show(): void {
     // Show the loading indicator
     this.loadingIndicatorService.showLoadingIndicator();
