@@ -8,8 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-gh-demo": "ng build --prod --aot --base-href 'https://pfbrowning.github.io/ng-loading-indicator'",
-    "publish-gh-demo": "ngh --dir=dist/ng-loading-indicator-demo --email=patrick@browninglogic.com"
+    "build-gh-demo": "ng build --prod --aot --base-href 'https://pfbrowning.github.io/ng-loading-indicator/'",
+    "publish-gh-demo": "ngh --dir=dist/ng-loading-indicator-demo --email=patrick@browninglogic.com",
+    "build-publish-gh-demo": "npm run build-gh-demo && npm run publish-gh-demo"
   },
   "private": true,
   "dependencies": {
