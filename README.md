@@ -7,7 +7,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
 ## Peer Dependencies
-* [@browninglogic/ng-file-drop](https://github.com/pfbrowning/ng-modal) (^3.0.1)
+* [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) (^3.0.1)
 
 ## Installation
 
@@ -26,7 +26,7 @@ import { NgLoadingIndicatorModule } from '@browninglogic/ng-loading-indicator';
   ],
   imports: [
     BrowserModule,
-    ModalManagerModule
+    NgLoadingIndicatorModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
@@ -38,7 +38,7 @@ Place a single `<nli-loading-indicator></nli-loading-indicator>` within the temp
 ```html
 <nli-loading-indicator></nli-loading-indicator>
 ```
-Inject the LoadingIndicatorService into any component that you want to show the loading indicator from.  When you want to show the loading indicator, call `showLoadingIndicator()` on the injected service, optionally passing custom text to show as the header.  If you don't provide loading text, the indicator will be shown with a header of "Loading".  When you want to hide the loading indicator, simply call `hideLoadingIndicator` on the injected service.
+Inject the LoadingIndicatorService into any component that you want to show the loading indicator from.  When you want to show the loading indicator, call `showLoadingIndicator()` on the injected service, optionally passing custom text to show as the header.  If you don't provide loading text, the indicator will be shown with a default header of "Loading".  When you want to hide the loading indicator, simply call `hideLoadingIndicator` on the injected service.
 ```typescript
 constructor(private loadingIndicatorService : LoadingIndicatorService) {}
 
@@ -56,6 +56,7 @@ Take note of the fact that we're hiding the loading indicator within finalize, r
 
 You can change the loading text in the middle of a long-running operation by calling showLoadingIndicator with different messages throughout your long-running operation before finally calling hideLoadingIndicator upon completion.  This could be useful if you're performing a complicated Observable sequence involving multiple sequential API calls and you want to inform your user of what's happening throughout the process.
 ```typescript
+
 public showDifferentMessages(): void {
     // Show the loading indicator with custom loading message text
     this.loadingIndicatorService.showLoadingIndicator("Fetching the first thing");
@@ -68,23 +69,20 @@ public showDifferentMessages(): void {
       /* Hide the loading indicator upon completion of both of the simulated API 
       calls, regardless of whether the operation succeeded or failed. */
       finalize(() => this.loadingIndicatorService.hideLoadingIndicator())
-).subscribe();
+    ).subscribe();
+}
 ```
 ## Styling
-@browninglogic/ng-loading-indicator uses @browninglogic/ng-modal and, as such, styling works in the same way for both components.
-* You can apply your own CSS classes as input properties.
-* Use general CSS selectors to set styles which aren't already set by the component or more specific CSS selectors to override styles set by the component with your own values.
-* Use global styles or use Angular's deprecated ng-deep shadow-piercing combinator.
-The component provides four input properties which allow you to supply your own CSS classes:
+[@browninglogic/ng-loading-indicator](https://github.com/pfbrowning/ng-loading-indicator) uses [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) and, as such, styling works in the same way for both components.  The component provides four input properties which allow you to supply your own CSS classes:
 * *modalClass* - class to apply to the modal window of the underlying @browninglogic/ng-modal.  This is a simple passthrough.
 * *overlayClass* - class to apply to the overlay of the underlying @browninglogic/ng-modal.  This is a simple passthrough.
 * *loadingMessageClass* - class to apply to the loading message header.  For example, if you want to adjust the font or header, this would be the place to do it.
 * *spinnerClass* - class to apply to the CSS spinner.  For example, if you wanted to change the size, color, or speed of the spinner, this would be the place to do it.
-### Template
+### Example Template
 ```html
 <nli-loading-indicator modalClass="customModal" overlayClass="customOverlay" loadingMessageClass="customLoadingMessage" spinnerClass="customSpinner"></nli-loading-indicator>
 ```
-### Global Styles
+### Example Global Styles
 ```css
 /* In order to set basic styles that aren't already applied by
 the library, simply define your custom styles in a CSS class and
