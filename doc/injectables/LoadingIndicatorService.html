@@ -62,6 +62,15 @@
             <code>projects/ng-loading-indicator/src/lib/services/loading-indicator.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Global service used throughout the application to communicate
+to the loading indicator component when it should show and hide
+its loading indicator </p>
+
+            </p>
 
 
             <section>
@@ -127,13 +136,16 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">projects/ng-loading-indicator/src/lib/services/loading-indicator.service.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">projects/ng-loading-indicator/src/lib/services/loading-indicator.service.ts:24</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Notifies the loading indicator component to hide the
+currently displayed loading indicator </p>
+</div>
 
                             <div class="io-description">
                                 <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -167,13 +179,16 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">projects/ng-loading-indicator/src/lib/services/loading-indicator.service.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">projects/ng-loading-indicator/src/lib/services/loading-indicator.service.ts:18</a></div>
                             </td>
                         </tr>
 
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Notifies the loading indicator component to show a 
+loading indicator with the specified text </p>
+</div>
 
                             <div class="io-description">
                                     <b>Parameters :</b>
@@ -227,17 +242,27 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, Output, EventEmitter } from &#x27;@angular/core&#x27;;
 
+
+/** Global service used throughout the application to communicate
+ * to the loading indicator component when it should show and hide
+ * its loading indicator */
 @Injectable({
   providedIn: &#x27;root&#x27;
 })
 export class LoadingIndicatorService {
+  /** Event signifying that the load started */
   @Output() eventLoadStarted &#x3D; new EventEmitter&lt;string&gt;();
+  /** Event signifying that the load ended */
   @Output() eventLoadEnded &#x3D; new EventEmitter();
 
+  /** Notifies the loading indicator component to show a 
+   * loading indicator with the specified text */
   public showLoadingIndicator(loadingMessage : string &#x3D; &quot;Loading&quot;) {
     this.eventLoadStarted.emit(loadingMessage);
   }
 
+  /** Notifies the loading indicator component to hide the
+   * currently displayed loading indicator */
   public hideLoadingIndicator() {
     this.eventLoadEnded.emit();
   }
