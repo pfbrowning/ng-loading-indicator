@@ -3,6 +3,12 @@ import { LoadingIndicatorService } from '../services/loading-indicator.service';
 import { Subscription } from 'rxjs';
 import { ModalWindowComponent } from '@browninglogic/ng-modal';
 
+
+/** This component listens for load start and load end events and
+ * shows / hides a loading indicator accordingly.  It's intended
+ * to be placed in the template of the application's root component
+ * so that one instance of the component can be used throughout the
+ * entire application. */
 @Component({
   selector: 'nli-loading-indicator',
   templateUrl: './loading-indicator.component.html',

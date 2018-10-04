@@ -114,7 +114,7 @@ div.modalOverlay.customOverlay {
 View it in action here: https://pfbrowning.github.io/ng-loading-indicator
 
 ## Documentation
-More detailed documentation can be found <a href="https://pfbrowning.github.io/ng-loading-indicator/doc/">here</a>.
+More detailed documentation can be found <a href="https://pfbrowning.github.io/ng-loading-indicator/doc/index.html">here</a>.
 
 ## License
 
