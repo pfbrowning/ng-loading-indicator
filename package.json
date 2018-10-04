@@ -8,9 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-gh-demo": "ng build --prod --aot --base-href 'https://pfbrowning.github.io/ng-loading-indicator/'",
-    "publish-gh-demo": "ngh --dir=dist/ng-loading-indicator-demo --email=patrick@browninglogic.com",
-    "build-publish-gh-demo": "npm run build-gh-demo && npm run publish-gh-demo"
+    "ghpages-build": "ng build --prod --aot --base-href 'https://pfbrowning.github.io/ng-loading-indicator/'",
+    "ghpages-publish": "ngh --dir=dist/ng-loading-indicator-demo --email=patrick@browninglogic.com",
+    "ghpages-build-publish": "npm run build-gh-demo && npm run publish-gh-demo",
+    "compodoc-generate": "compodoc projects/ng-loading-indicator -p projects/ng-loading-indicator/tsconfig.lib.json -d dist/ng-loading-indicator-demo/doc",
+    "ghpages-compodoc-build-push": "npm run ghpages-build && npm run compodoc-generate && npm run ghpages-publish"
   },
   "private": true,
   "dependencies": {
