@@ -16,6 +16,7 @@ node_js:
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
+  - npm i
 
 script: npm run build-test-library
 
