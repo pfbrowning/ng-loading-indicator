@@ -13,12 +13,16 @@
     "ghpages-build-publish": "npm run build-gh-demo && npm run publish-gh-demo",
     "compodoc-generate": "compodoc projects/ng-loading-indicator -p projects/ng-loading-indicator/tsconfig.lib.json -d dist/ng-loading-indicator-demo/doc",
     "ghpages-compodoc-build-push": "npm run ghpages-build && npm run compodoc-generate && npm run ghpages-publish",
-    "build-prod": "ng build --prod",
+    "build-prod": "ng build --prod --aot",
+    "build-lib": "rm -rf ./dist/ng-loading-indicator && ng build ng-loading-indicator",
     "test-library": "ng test ng-loading-indicator",
     "test-library-coverage": "ng test ng-loading-indicator --source-map --code-coverage=true",
     "build-test-library-coverage": "npm run build-prod && npm run test-library-coverage",
     "test:cover": "rm -rf ./coverage && ng test ng-loading-indicator --source-map --no-watch --code-coverage",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "copy-readme": "cp README.md dist/ng-loading-indicator",
+    "npm-pack": "cd dist/ng-loading-indicator && npm pack",
+    "package": "npm run build-lib && npm run copy-readme && npm run npm-pack"
   },
   "private": true,
   "dependencies": {
