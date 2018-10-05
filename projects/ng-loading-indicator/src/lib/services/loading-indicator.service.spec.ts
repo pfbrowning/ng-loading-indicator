@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { LoadingIndicatorService } from './loading-indicator.service';
 
 describe('LoadingIndicatorService', () => {
-  let loadingIndicatorService : LoadingIndicatorService;
+  let loadingIndicatorService: LoadingIndicatorService;
   let loadStartedSpy: jasmine.Spy;
   let loadEndedSpy: jasmine.Spy;
 
@@ -19,10 +19,10 @@ describe('LoadingIndicatorService', () => {
   });
 
   it('should properly emit load start event', () => {
-    loadingIndicatorService.showLoadingIndicator("Showing Indicator");
+    loadingIndicatorService.showLoadingIndicator('Showing Indicator');
 
     expect(loadStartedSpy).toHaveBeenCalledTimes(1);
-    expect(loadStartedSpy).toHaveBeenCalledWith("Showing Indicator");
+    expect(loadStartedSpy).toHaveBeenCalledWith('Showing Indicator');
   });
 
   it('should properly emit load ended event', () => {

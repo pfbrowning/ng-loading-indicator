@@ -41,46 +41,46 @@ describe('LoadingIndicatorComponent', () => {
     // Check that everything is as expected upon initialization
     expect(component.loadingIndicatorModal.visible).toBe(false);
     expect(component.loadingMessage).toBeUndefined();
-    expect(loadingMessageHeader.textContent).toBe("");
+    expect(loadingMessageHeader.textContent).toBe('');
 
     // Simulate a load start
-    service.eventLoadStarted.emit("Load Started");
+    service.eventLoadStarted.emit('Load Started');
     fixture.detectChanges();
 
     // Check that the component is visible and shows the proper text
     expect(component.loadingIndicatorModal.visible).toBe(true);
-    expect(component.loadingMessage).toBe("Load Started");
-    expect(loadingMessageHeader.textContent).toBe("Load Started");
+    expect(component.loadingMessage).toBe('Load Started');
+    expect(loadingMessageHeader.textContent).toBe('Load Started');
 
     // Simulate a load end
     service.eventLoadEnded.emit();
     fixture.detectChanges();
 
-    /* Check that the component is no longer visible and that 
+    /* Check that the component is no longer visible and that
     the loading text was reset. */
     expect(component.loadingIndicatorModal.visible).toBe(false);
     expect(component.loadingMessage).toBeNull();
-    expect(loadingMessageHeader.textContent).toBe("");
-  })
+    expect(loadingMessageHeader.textContent).toBe('');
+  });
 
   it('should properly apply user-provided css classes', () => {
     // Test that everything is what we expect it to be upon initialization
     expect(component.loadingIndicatorModal.modalClass).toBe('');
     expect(component.loadingIndicatorModal.overlayClass).toBe('');
-    expect(loadingMessageHeader.getAttribute('class')).toBe("loadingMessage ");
-    expect(spinnerDiv.getAttribute('class')).toBe("spinner ");
+    expect(loadingMessageHeader.getAttribute('class')).toBe('loadingMessage ');
+    expect(spinnerDiv.getAttribute('class')).toBe('spinner ');
 
     // Apply custom CSS classes as input properties
-    component.overlayClass = "testOverlayClass";
-    component.modalClass = "testModalClass";
-    component.loadingMessageClass = "testLoadingMessageClass";
-    component.spinnerClass = "testSpinnerClass";
+    component.overlayClass = 'testOverlayClass';
+    component.modalClass = 'testModalClass';
+    component.loadingMessageClass = 'testLoadingMessageClass';
+    component.spinnerClass = 'testSpinnerClass';
     fixture.detectChanges();
 
     // Ensure that the CSS is properly applied to the DOM and the modal component
-    expect(component.loadingIndicatorModal.modalClass).toBe("testModalClass");
-    expect(component.loadingIndicatorModal.overlayClass).toBe("testOverlayClass");
-    expect(loadingMessageHeader.getAttribute('class')).toBe("loadingMessage testLoadingMessageClass");
-    expect(spinnerDiv.getAttribute('class')).toBe("spinner testSpinnerClass");
+    expect(component.loadingIndicatorModal.modalClass).toBe('testModalClass');
+    expect(component.loadingIndicatorModal.overlayClass).toBe('testOverlayClass');
+    expect(loadingMessageHeader.getAttribute('class')).toBe('loadingMessage testLoadingMessageClass');
+    expect(spinnerDiv.getAttribute('class')).toBe('spinner testSpinnerClass');
 });
 });

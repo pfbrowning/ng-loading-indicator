@@ -13,9 +13,9 @@ export class LoadingIndicatorService {
   /** Event signifying that the load ended */
   @Output() eventLoadEnded = new EventEmitter();
 
-  /** Notifies the loading indicator component to show a 
+  /** Notifies the loading indicator component to show a
    * loading indicator with the specified text */
-  public showLoadingIndicator(loadingMessage : string = "Loading") {
+  public showLoadingIndicator(loadingMessage: string = 'Loading') {
     this.eventLoadStarted.emit(loadingMessage);
   }
 

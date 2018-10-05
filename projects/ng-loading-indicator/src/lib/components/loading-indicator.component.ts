@@ -15,7 +15,7 @@ import { ModalWindowComponent } from '@browninglogic/ng-modal';
   styleUrls: ['./loading-indicator.component.css']
 })
 export class LoadingIndicatorComponent implements OnInit, OnDestroy {
-  constructor(private loadingIndicatorService : LoadingIndicatorService) {}
+  constructor(private loadingIndicatorService: LoadingIndicatorService) {}
   /** Custom CSS class(es) to apply to the modal*/
   @Input() modalClass = '';
   /** Custom CSS class(es) to apply to the overlay*/
@@ -24,13 +24,13 @@ export class LoadingIndicatorComponent implements OnInit, OnDestroy {
   @Input() loadingMessageClass = '';
   /** Custom CSS class(es) to apply to the spinner*/
   @Input() spinnerClass = '';
-  @ViewChild('loadingIndicatorModal') loadingIndicatorModal : ModalWindowComponent;
-  private _loadingMessage : string;
-  private subLoadStarted : Subscription;
-  private subLoadEnded : Subscription;
+  @ViewChild('loadingIndicatorModal') loadingIndicatorModal: ModalWindowComponent;
+  private _loadingMessage: string;
+  private subLoadStarted: Subscription;
+  private subLoadEnded: Subscription;
 
   /** Loading message to bind to the loading modal window */
-  public get loadingMessage() : string {
+  public get loadingMessage(): string {
     return this._loadingMessage;
   }
 
@@ -46,7 +46,7 @@ export class LoadingIndicatorComponent implements OnInit, OnDestroy {
   }
 
   /** Show the loading indicator and set the provided loading message for template binding */
-  private onLoadStarted(loadingMessage : string) {
+  private onLoadStarted(loadingMessage: string) {
     this._loadingMessage = loadingMessage;
     this.loadingIndicatorModal.show();
   }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingIndicatorService} from 'ng-loading-indicator'
+import { LoadingIndicatorService } from 'ng-loading-indicator';
 import { timer } from 'rxjs';
 import { tap, switchMap, finalize } from 'rxjs/operators';
 
@@ -25,14 +25,14 @@ export class AppComponent {
 
   public showDifferentMessages(): void {
     // Show the loading indicator with custom loading message text
-    this.loadingIndicatorService.showLoadingIndicator("Fetching the first thing");
+    this.loadingIndicatorService.showLoadingIndicator('Fetching the first thing');
     // Simulate a two second API call
     timer(2000).pipe(
       // Change the loading message text between the first and second simulated API call
-      tap(() => this.loadingIndicatorService.showLoadingIndicator("Fetching something else")),
+      tap(() => this.loadingIndicatorService.showLoadingIndicator('Fetching something else')),
       // Simulate a second two second API call
       switchMap(() => timer(2000)),
-      /* Hide the loading indicator upon completion of both of the simulated API 
+      /* Hide the loading indicator upon completion of both of the simulated API
       calls, regardless of whether the operation succeeded or failed. */
       finalize(() => this.loadingIndicatorService.hideLoadingIndicator())
     ).subscribe();
