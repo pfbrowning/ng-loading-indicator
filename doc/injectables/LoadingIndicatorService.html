@@ -186,7 +186,7 @@ currently displayed loading indicator </p>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Notifies the loading indicator component to show a 
+                            <div class="io-description"><p>Notifies the loading indicator component to show a
 loading indicator with the specified text </p>
 </div>
 
@@ -213,7 +213,7 @@ loading indicator with the specified text </p>
                                                     </td>
                                                     
                                                         <td>
-                                                                <code>&quot;Loading&quot;</code>
+                                                                <code>&#x27;Loading&#x27;</code>
                                                         </td>
 
                                                 </tr>
@@ -255,9 +255,9 @@ export class LoadingIndicatorService {
   /** Event signifying that the load ended */
   @Output() eventLoadEnded &#x3D; new EventEmitter();
 
-  /** Notifies the loading indicator component to show a 
+  /** Notifies the loading indicator component to show a
    * loading indicator with the specified text */
-  public showLoadingIndicator(loadingMessage : string &#x3D; &quot;Loading&quot;) {
+  public showLoadingIndicator(loadingMessage: string &#x3D; &#x27;Loading&#x27;) {
     this.eventLoadStarted.emit(loadingMessage);
   }
 
