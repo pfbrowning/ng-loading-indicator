@@ -4,6 +4,7 @@
 
 # ng-loading-indicator - A simple, customizable, CSS-based loading indicator for Angular 6
 
+[![npm version](https://badge.fury.io/js/%40browninglogic%2Fng-loading-indicator.svg)](https://badge.fury.io/js/%40browninglogic%2Fng-loading-indicator)
 [![Build Status](https://travis-ci.org/pfbrowning/ng-loading-indicator.svg?branch=master)](https://travis-ci.org/pfbrowning/ng-loading-indicator)
 [![Coverage Status](https://coveralls.io/repos/github/pfbrowning/ng-loading-indicator/badge.svg?branch=master)](https://coveralls.io/github/pfbrowning/ng-loading-indicator?branch=master)
 [![dependency Status](https://david-dm.org/pfbrowning/ng-loading-indicator.svg?path=projects%2Fng-loading-indicator)](https://david-dm.org/pfbrowning/ng-loading-indicator?path=projects%2Fng-loading-indicator)
