@@ -13,14 +13,18 @@ language: node_js
 node_js:
   - "node"
 
+install:
+  - npm install -g @angular/cli
+  - npm install -g karma
+  - npm install
+
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - npm i
 
-script: npm run build-test-library
+script: npm run test:cover
 
-#after_success: gulp coveralls
+after_success: npm run coveralls
 
 cache:
   yarn: true

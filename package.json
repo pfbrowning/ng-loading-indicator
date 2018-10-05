@@ -15,7 +15,10 @@
     "ghpages-compodoc-build-push": "npm run ghpages-build && npm run compodoc-generate && npm run ghpages-publish",
     "build-prod": "ng build --prod",
     "test-library": "ng test ng-loading-indicator",
-    "build-test-library": "npm run build-prod && npm run test-library"
+    "test-library-coverage": "ng test ng-loading-indicator --code-coverage=true",
+    "build-test-library-coverage": "npm run build-prod && npm run test-library-coverage",
+    "test:cover": "rm -rf ./coverage && ng test ng-loading-indicator --no-watch --code-coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "private": true,
   "dependencies": {
@@ -44,6 +47,7 @@
     "@types/node": "~8.9.4",
     "angular-cli-ghpages": "^0.5.3",
     "codelyzer": "~4.3.0",
+    "coveralls": "^3.0.2",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
