@@ -7,7 +7,6 @@
 [![Build Status](https://travis-ci.org/pfbrowning/ng-loading-indicator.svg?branch=master)](https://travis-ci.org/pfbrowning/ng-loading-indicator)
 [![Coverage Status](https://coveralls.io/repos/github/pfbrowning/ng-loading-indicator/badge.svg?branch=master)](https://coveralls.io/github/pfbrowning/ng-loading-indicator?branch=master)
 [![dependency Status](https://david-dm.org/pfbrowning/ng-loading-indicator.svg?path=projects%2Fng-loading-indicator)](https://david-dm.org/pfbrowning/ng-loading-indicator?path=projects%2Fng-loading-indicator)
-[![devDependency Status](https://david-dm.org/pfbrowning/ng-loading-indicator/dev-status.svg?path=projects%2Fng-loading-indicator&branch=master)](https://david-dm.org/pfbrowning/ng-loading-indicator?path=projects%2Fng-loading-indicator#info=devDependencies)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
