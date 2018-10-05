@@ -1,6 +1,26 @@
 {
   "name": "@browninglogic/ng-loading-indicator",
   "version": "0.0.1",
+  "description": "A simple, customizable, CSS-based loading indicator for Angular 6",
+  "keywords": [
+    "ng",
+    "angular",
+    "library",
+    "loading",
+    "indicator"
+  ],
+  "author": {
+    "name": "Patrick Browning",
+    "url": "https://browninglogic.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pfbrowning/ng-loading-indicator.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pfbrowning/ng-loading-indicator/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
