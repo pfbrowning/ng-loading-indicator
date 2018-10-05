@@ -25,6 +25,13 @@ describe('LoadingIndicatorService', () => {
     expect(loadStartedSpy).toHaveBeenCalledWith('Showing Indicator');
   });
 
+  it('should properly emit load start event with the default loading text', () => {
+    loadingIndicatorService.showLoadingIndicator();
+
+    expect(loadStartedSpy).toHaveBeenCalledTimes(1);
+    expect(loadStartedSpy).toHaveBeenCalledWith('Loading');
+  });
+
   it('should properly emit load ended event', () => {
     loadingIndicatorService.hideLoadingIndicator();
 
