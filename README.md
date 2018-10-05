@@ -15,15 +15,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) (^3.0.1)
 
 ## Installation
-
-1. Install npm module:
+1. ng-loading-indicator depends on [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal).  Install them both:
 ```bash
-$ npm install @browninglogic/ng-loading-indicator --save
+$ npm i @browninglogic/ng-loading-indicator @browninglogic/ng-modal --save
 ```
-
-2. Import NgLoadingIndicatorModule
+2. Import NgLoadingIndicatorModule and ModalManagerModule
 ```typescript
 import { NgLoadingIndicatorModule } from '@browninglogic/ng-loading-indicator';
+import { ModalManagerModule } from '@browninglogic/ng-modal';
 
 @NgModule({
   declarations: [
@@ -31,6 +30,7 @@ import { NgLoadingIndicatorModule } from '@browninglogic/ng-loading-indicator';
   ],
   imports: [
     BrowserModule,
+    ModalManagerModule,
     NgLoadingIndicatorModule
   ],
   providers: [],
