@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoadingIndicatorService } from 'ng-loading-indicator';
+import { LoadingIndicatorService } from '@browninglogic/ng-loading-indicator';
 import { timer } from 'rxjs';
 import { tap, switchMap, finalize } from 'rxjs/operators';
 

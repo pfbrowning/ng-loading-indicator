@@ -18,10 +18,10 @@
       "dom"
     ],
     "paths": {
-      "ng-loading-indicator": [
+      "@browninglogic/ng-loading-indicator": [
         "dist/ng-loading-indicator"
       ],
-      "ng-loading-indicator/*": [
+      "@browninglogic/ng-loading-indicator/*": [
         "dist/ng-loading-indicator/*"
       ]
     }

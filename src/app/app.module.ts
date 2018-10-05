@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NgLoadingIndicatorModule } from 'ng-loading-indicator';
+import { NgLoadingIndicatorModule } from '@browninglogic/ng-loading-indicator';
 
 @NgModule({
   declarations: [
