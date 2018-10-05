@@ -22,7 +22,9 @@ before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
 
-script: npm run test:cover
+script: 
+  - npm run lint
+  - npm run test:cover
 
 after_success: npm run coveralls
 
