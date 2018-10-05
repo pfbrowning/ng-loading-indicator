@@ -15,9 +15,9 @@
     "ghpages-compodoc-build-push": "npm run ghpages-build && npm run compodoc-generate && npm run ghpages-publish",
     "build-prod": "ng build --prod",
     "test-library": "ng test ng-loading-indicator",
-    "test-library-coverage": "ng test ng-loading-indicator --code-coverage=true",
+    "test-library-coverage": "ng test ng-loading-indicator --source-map --code-coverage=true",
     "build-test-library-coverage": "npm run build-prod && npm run test-library-coverage",
-    "test:cover": "rm -rf ./coverage && ng test ng-loading-indicator --no-watch --code-coverage",
+    "test:cover": "rm -rf ./coverage && ng test ng-loading-indicator --source-map --no-watch --code-coverage",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "private": true,
