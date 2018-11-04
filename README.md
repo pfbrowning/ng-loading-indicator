@@ -2,17 +2,19 @@
   <img height="256px" width="256px" style="text-align: center;" src="https://cdn.rawgit.com/pfbrowning/ng-loading-indicator/master/src/assets/logo.svg">
 </p>
 
-# ng-loading-indicator - A simple, customizable, CSS-based loading indicator for Angular 6
+# ng-loading-indicator - A simple, customizable, CSS-based loading indicator for Angular 6+
 
 [![npm version](https://badge.fury.io/js/%40browninglogic%2Fng-loading-indicator.svg)](https://badge.fury.io/js/%40browninglogic%2Fng-loading-indicator)
 [![Build Status](https://travis-ci.org/pfbrowning/ng-loading-indicator.svg?branch=master)](https://travis-ci.org/pfbrowning/ng-loading-indicator)
 [![Coverage Status](https://coveralls.io/repos/github/pfbrowning/ng-loading-indicator/badge.svg?branch=master)](https://coveralls.io/github/pfbrowning/ng-loading-indicator?branch=master)
 [![dependency Status](https://david-dm.org/pfbrowning/ng-loading-indicator.svg?path=projects%2Fng-loading-indicator)](https://david-dm.org/pfbrowning/ng-loading-indicator?path=projects%2Fng-loading-indicator)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
-
 ## Peer Dependencies
 * [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) (^3.0.1)
+* [@angular/common] (https://www.npmjs.com/package/@angular/common) (^6.0.0)
+* [@angular/core] (https://www.npmjs.com/package/@angular/core) (^6.0.0)
+
+The library has been tested with both Angular 6 and 7, so you should be fine with either.
 
 ## Installation
 1.  ng-loading-indicator depends on [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal).  Install them both:
