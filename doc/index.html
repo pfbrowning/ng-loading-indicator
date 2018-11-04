@@ -38,7 +38,8 @@
 </p>
 
 <h1 id="ng-loading-indicator-a-simple-customizable-css-based-loading-indicator-for-angular-6">ng-loading-indicator - A simple, customizable, CSS-based loading indicator for Angular 6</h1>
-<p><a href="https://travis-ci.org/pfbrowning/ng-loading-indicator"><img src="https://travis-ci.org/pfbrowning/ng-loading-indicator.svg?branch=master" alt="Build Status" class="img-responsive"></a>
+<p><a href="https://badge.fury.io/js/%40browninglogic%2Fng-loading-indicator"><img src="https://badge.fury.io/js/%40browninglogic%2Fng-loading-indicator.svg" alt="npm version" class="img-responsive"></a>
+<a href="https://travis-ci.org/pfbrowning/ng-loading-indicator"><img src="https://travis-ci.org/pfbrowning/ng-loading-indicator.svg?branch=master" alt="Build Status" class="img-responsive"></a>
 <a href="https://coveralls.io/github/pfbrowning/ng-loading-indicator?branch=master"><img src="https://coveralls.io/repos/github/pfbrowning/ng-loading-indicator/badge.svg?branch=master" alt="Coverage Status" class="img-responsive"></a>
 <a href="https://david-dm.org/pfbrowning/ng-loading-indicator?path=projects%2Fng-loading-indicator"><img src="https://david-dm.org/pfbrowning/ng-loading-indicator.svg?path=projects%2Fng-loading-indicator" alt="dependency Status" class="img-responsive"></a></p>
 <p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 6.2.3.</p>
@@ -48,12 +49,11 @@
 </ul>
 <h2 id="installation">Installation</h2>
 <ol>
-<li><p>Install npm module:</p>
-<div><pre class="line-numbers"><code class="language-bash">$ npm install &#64;browninglogic/ng-loading-indicator --save</code></pre></div></li>
-<li><p>Import NgLoadingIndicatorModule
+<li>ng-loading-indicator depends on <a href="https://github.com/pfbrowning/ng-modal">@browninglogic/ng-modal</a>.  Install them both:<div><pre class="line-numbers"><code class="language-bash">$ npm i &#64;browninglogic/ng-loading-indicator &#64;browninglogic/ng-modal --save</code></pre></div></li>
+<li>Import NgLoadingIndicatorModule and ModalManagerModule
 <code>`</code>typescript
-import { NgLoadingIndicatorModule } from &#39;@browninglogic/ng-loading-indicator&#39;;</p>
-</li>
+import { NgLoadingIndicatorModule } from &#39;@browninglogic/ng-loading-indicator&#39;;
+import { ModalManagerModule } from &#39;@browninglogic/ng-modal&#39;;</li>
 </ol>
 <p>@NgModule({
   declarations: [
@@ -61,6 +61,7 @@ import { NgLoadingIndicatorModule } from &#39;@browninglogic/ng-loading-indicato
   ],
   imports: [
     BrowserModule,
+    ModalManagerModule,
     NgLoadingIndicatorModule
   ],
   providers: [],

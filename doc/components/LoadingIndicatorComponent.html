@@ -797,13 +797,13 @@ export class LoadingIndicatorComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Subscribe to the relevant events in order to show and hide the modal
-    this.subLoadStarted &#x3D; this.loadingIndicatorService.eventLoadStarted.subscribe(loadingMessage &#x3D;&gt; this.onLoadStarted(loadingMessage));
-    this.subLoadEnded &#x3D; this.loadingIndicatorService.eventLoadEnded.subscribe(() &#x3D;&gt; this.onLoadEnded());
+    this.subLoadStarted &#x3D; this.loadingIndicatorService.loadStarted.subscribe(loadingMessage &#x3D;&gt; this.onLoadStarted(loadingMessage));
+    this.subLoadEnded &#x3D; this.loadingIndicatorService.loadEnded.subscribe(() &#x3D;&gt; this.onLoadEnded());
   }
 
   ngOnDestroy() {
-    this.subLoadStarted.unsubscribe();
-    this.subLoadEnded.unsubscribe();
+    if (this.subLoadStarted) { this.subLoadStarted.unsubscribe(); }
+    if (this.subLoadEnded) { this.subLoadEnded.unsubscribe(); }
   }
 
   /** Show the loading indicator and set the provided loading message for template binding */
