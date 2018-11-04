@@ -41,8 +41,8 @@ export class LoadingIndicatorComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if(this.subLoadStarted) this.subLoadStarted.unsubscribe();
-    if(this.subLoadEnded) this.subLoadEnded.unsubscribe();
+    if (this.subLoadStarted) { this.subLoadStarted.unsubscribe(); }
+    if (this.subLoadEnded) { this.subLoadEnded.unsubscribe(); }
   }
 
   /** Show the loading indicator and set the provided loading message for template binding */

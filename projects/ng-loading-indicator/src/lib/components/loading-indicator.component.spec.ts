@@ -102,5 +102,5 @@ describe('LoadingIndicatorComponent', () => {
 
   it('should gracefully deconstruct if not initialized', () => {
     fixture.destroy();
-  })
+  });
 });

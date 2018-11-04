@@ -11,7 +11,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class LoadingIndicatorService {
   private loading = new BehaviorSubject<boolean>(false);
-  private loadingMessage : string;
+  private loadingMessage: string;
 
   /** Notifies the loading indicator component to show a
    * loading indicator with the specified text */
@@ -29,14 +29,14 @@ export class LoadingIndicatorService {
 
   public get loadStarted(): Observable<string> {
     return this.loading.pipe(
-      filter(loading => loading == true),
+      filter(loading => loading === true),
       map(() => this.loadingMessage)
-    )
+    );
   }
 
   public get loadEnded(): Observable<void> {
     return this.loading.pipe(
-      filter(loading => loading == false),
+      filter(loading => loading === false),
       map(() => null)
     );
   }
