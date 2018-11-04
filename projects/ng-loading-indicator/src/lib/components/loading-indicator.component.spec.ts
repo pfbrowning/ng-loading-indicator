@@ -99,4 +99,8 @@ describe('LoadingIndicatorComponent', () => {
     expect(component.loadingMessage).toBe('Load Started');
     expect(loadingMessageHeader.textContent).toBe('Load Started');
   });
+
+  it('should gracefully deconstruct if not initialized', () => {
+    fixture.destroy();
+  })
 });
