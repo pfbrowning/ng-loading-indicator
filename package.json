@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "ghpages-build": "ng build --prod --aot --base-href 'https://pfbrowning.github.io/ng-loading-indicator/'",
     "ghpages-publish": "ngh --dir=dist/ng-loading-indicator-demo --email=patrick@browninglogic.com",
-    "ghpages-build-publish": "npm run build-gh-demo && npm run publish-gh-demo",
+    "ghpages-build-publish": "npm run ghpages-build && npm run ghpages-publish",
     "compodoc-generate": "compodoc projects/ng-loading-indicator -p projects/ng-loading-indicator/tsconfig.lib.json -d dist/ng-loading-indicator-demo/doc",
     "ghpages-compodoc-build-push": "npm run ghpages-build && npm run compodoc-generate && npm run ghpages-publish",
     "build-prod": "ng build --prod --aot",
