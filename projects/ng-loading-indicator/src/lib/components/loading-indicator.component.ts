@@ -36,8 +36,8 @@ export class LoadingIndicatorComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Subscribe to the relevant events in order to show and hide the modal
-    this.subLoadStarted = this.loadingIndicatorService.eventLoadStarted.subscribe(loadingMessage => this.onLoadStarted(loadingMessage));
-    this.subLoadEnded = this.loadingIndicatorService.eventLoadEnded.subscribe(() => this.onLoadEnded());
+    this.subLoadStarted = this.loadingIndicatorService.loadStarted.subscribe(loadingMessage => this.onLoadStarted(loadingMessage));
+    this.subLoadEnded = this.loadingIndicatorService.loadEnded.subscribe(() => this.onLoadEnded());
   }
 
   ngOnDestroy() {

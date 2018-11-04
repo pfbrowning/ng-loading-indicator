@@ -28,9 +28,6 @@ describe('LoadingIndicatorComponent', () => {
     // Get a handle to the modal header & spinner div so that we can query the bound text & css classes
     loadingMessageHeader = fixture.debugElement.query(By.css('h1[header]')).nativeElement;
     spinnerDiv = fixture.debugElement.query(By.css('div[body]')).nativeElement;
-
-    // Detect changes to initialize the component
-    fixture.detectChanges();
   });
 
   it('should create', () => {
@@ -38,13 +35,16 @@ describe('LoadingIndicatorComponent', () => {
   });
 
   it('should properly show and hide the loading indicator', () => {
+    // Detect changes to initialize the component
+    fixture.detectChanges();
+
     // Check that everything is as expected upon initialization
     expect(component.loadingIndicatorModal.visible).toBe(false);
-    expect(component.loadingMessage).toBeUndefined();
+    expect(component.loadingMessage).toBeNull();
     expect(loadingMessageHeader.textContent).toBe('');
 
     // Simulate a load start
-    service.eventLoadStarted.emit('Load Started');
+    service.showLoadingIndicator('Load Started');
     fixture.detectChanges();
 
     // Check that the component is visible and shows the proper text
@@ -53,7 +53,7 @@ describe('LoadingIndicatorComponent', () => {
     expect(loadingMessageHeader.textContent).toBe('Load Started');
 
     // Simulate a load end
-    service.eventLoadEnded.emit();
+    service.hideLoadingIndicator();
     fixture.detectChanges();
 
     /* Check that the component is no longer visible and that
@@ -64,6 +64,9 @@ describe('LoadingIndicatorComponent', () => {
   });
 
   it('should properly apply user-provided css classes', () => {
+    // Detect changes to initialize the component
+    fixture.detectChanges();
+
     // Test that everything is what we expect it to be upon initialization
     expect(component.loadingIndicatorModal.modalClass).toBe('');
     expect(component.loadingIndicatorModal.overlayClass).toBe('');
@@ -82,5 +85,18 @@ describe('LoadingIndicatorComponent', () => {
     expect(component.loadingIndicatorModal.overlayClass).toBe('testOverlayClass');
     expect(loadingMessageHeader.getAttribute('class')).toBe('loadingMessage testLoadingMessageClass');
     expect(spinnerDiv.getAttribute('class')).toBe('spinner testSpinnerClass');
-});
+  });
+
+  it('should show the loading indicator even if showLoadingIndicator was called before the component was initialized', () => {
+    // Call showLoadingIndicator before initializing the component
+    service.showLoadingIndicator('Load Started');
+
+    // Initialize the component
+    fixture.detectChanges();
+
+    // Check that the component is visible and shows the proper text
+    expect(component.loadingIndicatorModal.visible).toBe(true);
+    expect(component.loadingMessage).toBe('Load Started');
+    expect(loadingMessageHeader.textContent).toBe('Load Started');
+  });
 });

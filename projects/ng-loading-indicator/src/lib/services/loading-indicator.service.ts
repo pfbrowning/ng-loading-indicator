@@ -1,4 +1,6 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 
 
 /** Global service used throughout the application to communicate
@@ -8,20 +10,34 @@ import { Injectable, Output, EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class LoadingIndicatorService {
-  /** Event signifying that the load started */
-  @Output() eventLoadStarted = new EventEmitter<string>();
-  /** Event signifying that the load ended */
-  @Output() eventLoadEnded = new EventEmitter();
+  private loading = new BehaviorSubject<boolean>(false);
+  private loadingMessage : string;
 
   /** Notifies the loading indicator component to show a
    * loading indicator with the specified text */
   public showLoadingIndicator(loadingMessage: string = 'Loading') {
-    this.eventLoadStarted.emit(loadingMessage);
+    this.loadingMessage = loadingMessage;
+    this.loading.next(true);
   }
 
   /** Notifies the loading indicator component to hide the
    * currently displayed loading indicator */
   public hideLoadingIndicator() {
-    this.eventLoadEnded.emit();
+    this.loadingMessage = null;
+    this.loading.next(false);
+  }
+
+  public get loadStarted(): Observable<string> {
+    return this.loading.pipe(
+      filter(loading => loading == true),
+      map(() => this.loadingMessage)
+    )
+  }
+
+  public get loadEnded(): Observable<void> {
+    return this.loading.pipe(
+      filter(loading => loading == false),
+      map(() => null)
+    );
   }
 }
