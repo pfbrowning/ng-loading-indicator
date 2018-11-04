@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test ng-loading-indicator",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ghpages-build": "ng build --prod --aot --base-href 'https://pfbrowning.github.io/ng-loading-indicator/'",
