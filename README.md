@@ -129,10 +129,10 @@ div.nm-modal-window.custom-overlay {
 ```
 
 ## Demo
-View it in action here: https://pfbrowning.github.io/ng-loading-indicator
+View it in action [here](https://pfbrowning.github.io/ng-loading-indicator).
 
 ## Documentation
-More detailed documentation can be found <a href="https://pfbrowning.github.io/ng-loading-indicator/doc/index.html">here</a>.
+More detailed documentation can be found [here](https://pfbrowning.github.io/ng-loading-indicator/doc/index.html).
 
 ## License
 
