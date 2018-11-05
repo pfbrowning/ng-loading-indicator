@@ -22,8 +22,8 @@
     "url": "https://github.com/pfbrowning/ng-loading-indicator/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
-    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
-    "@browninglogic/ng-modal": "^3.0.1"
+    "@angular/common": "^6.0.0",
+    "@angular/core": "^6.0.0",
+    "@browninglogic/ng-modal": "^4.0.0"
   }
 }

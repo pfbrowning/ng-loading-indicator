@@ -10,17 +10,22 @@
 [![dependency Status](https://david-dm.org/pfbrowning/ng-loading-indicator.svg?path=projects%2Fng-loading-indicator)](https://david-dm.org/pfbrowning/ng-loading-indicator?path=projects%2Fng-loading-indicator)
 
 ## Peer Dependencies
-* [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) (^3.0.1)
+* [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) (^4.0.0)
 * [@angular/common](https://www.npmjs.com/package/@angular/common) (^6.0.0)
 * [@angular/core](https://www.npmjs.com/package/@angular/core) (^6.0.0)
 
 The library has been tested with both Angular 6 and 7, so you should be fine with either.
 
 ## Upgrade Notes
-* As of version 2.0.0, I've renamed my CSS classes from camelCase to hyphen-case
+* As of version 2.0.0 of the loading indicator, version 4.0.0 of 
+[@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) is now required.
+In addition, I've renamed my CSS classes from camelCase to hyphen-case
 for readability and added prefixes for specificity.  As a result, if you were 
-previously referencing my loadingMessage or modalWindow class in your CSS, you'll want to 
-rename those references to nli-loading-message and nm-modal-window accordingly.
+previously referencing the loadingMessage class in your CSS, you'll want to 
+rename those references to nli-loading-message accordingly.  Version 4.0.0
+of @browninglogic/ng-modal includes similar CSS changes, so if you were referencing
+any of its CSS classes you'll want to check those 
+[upgrade notes](https://github.com/pfbrowning/ng-modal) as well.
 
 ## Installation
 1.  ng-loading-indicator depends on [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal).  Install them both:
