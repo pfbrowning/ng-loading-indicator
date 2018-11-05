@@ -13,6 +13,6 @@
     100% { transform: rotate(360deg); }
 }
 
-.loadingMessage {
+.nli-loading-message {
     margin:3px;
 }

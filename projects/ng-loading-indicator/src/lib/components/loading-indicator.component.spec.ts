@@ -70,7 +70,7 @@ describe('LoadingIndicatorComponent', () => {
     // Test that everything is what we expect it to be upon initialization
     expect(component.loadingIndicatorModal.modalClass).toBe('');
     expect(component.loadingIndicatorModal.overlayClass).toBe('');
-    expect(loadingMessageHeader.getAttribute('class')).toBe('loadingMessage ');
+    expect(loadingMessageHeader.getAttribute('class')).toBe('nli-loading-message ');
     expect(spinnerDiv.getAttribute('class')).toBe('spinner ');
 
     // Apply custom CSS classes as input properties
@@ -83,7 +83,7 @@ describe('LoadingIndicatorComponent', () => {
     // Ensure that the CSS is properly applied to the DOM and the modal component
     expect(component.loadingIndicatorModal.modalClass).toBe('testModalClass');
     expect(component.loadingIndicatorModal.overlayClass).toBe('testOverlayClass');
-    expect(loadingMessageHeader.getAttribute('class')).toBe('loadingMessage testLoadingMessageClass');
+    expect(loadingMessageHeader.getAttribute('class')).toBe('nli-loading-message testLoadingMessageClass');
     expect(spinnerDiv.getAttribute('class')).toBe('spinner testSpinnerClass');
   });
 

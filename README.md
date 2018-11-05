@@ -16,6 +16,12 @@
 
 The library has been tested with both Angular 6 and 7, so you should be fine with either.
 
+## Upgrade Notes
+* As of version 2.0.0, I've renamed my CSS classes from camelCase to hyphen-case
+for readability and added prefixes for specificity.  As a result, if you were 
+previously referencing my loadingMessage or modalWindow class in your CSS, you'll want to 
+rename those references to nli-loading-message and nm-modal-window accordingly.
+
 ## Installation
 1.  ng-loading-indicator depends on [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal).  Install them both:
 ```bash
@@ -87,32 +93,32 @@ public showDifferentMessages(): void {
 * *spinnerClass* - class to apply to the CSS spinner.  For example, if you wanted to change the size, color, or speed of the spinner, this would be the place to do it.
 ### Example Template
 ```html
-<nli-loading-indicator modalClass="customModal" overlayClass="customOverlay" loadingMessageClass="customLoadingMessage" spinnerClass="customSpinner"></nli-loading-indicator>
+<nli-loading-indicator modalClass="custom-modal" overlayClass="custom-overlay" loadingMessageClass="custom-loading-message" spinnerClass="custom-spinner"></nli-loading-indicator>
 ```
 ### Example Global Styles
 ```css
 /* In order to set basic styles that aren't already applied by
 the library, simply define your custom styles in a CSS class and
 then bind that class name to the corresponding input property */
-.customLoadingMessage {
+.custom-loading-message {
     font-style:italic;
 }
 /* Use a more specific CSS selector in order to 
 override styles which are already applied by the
 library, such as changing the color of the spinner*/
-div.spinner.customSpinner {
+div.spinner.custom-spinner {
     border-top-color:green;
 }
 /* Override the loading message header margin */
-h1.loadingMessage.customLoadingMessage {
+h1.nli-loading-message.custom-loading-message {
     margin:15px;
 }
 /* Override the border color of the loading indicator modal */
-div.modalWindow.customModal {
+div.nm-modal-window.custom-modal {
     border-color: black;
 }
 /* Override the modal overlay with a higher opacity */
-div.modalOverlay.customOverlay {
+div.nm-modal-window.custom-overlay {
     background: rgba(0, 0, 0, 0.7);
 }
 ```

@@ -1,25 +1,25 @@
 /* In order to set basic styles that aren't already applied by
 the library, simply define your custom styles in a CSS class and
 then bind that class name to the corresponding input property */
-.customLoadingMessage {
+.custom-loading-message {
     font-style:italic;
 }
 /* Use a more specific CSS selector in order to 
 override styles which are already applied by the
 library, such as changing the color of the spinner*/
-div.spinner.customSpinner {
+div.spinner.custom-spinner {
     border-top-color:green;
 }
 /* Override the loading message header margin */
-h1.loadingMessage.customLoadingMessage {
+h1.nli-loading-message.custom-loading-message {
     margin:15px;
 }
 /* Override the border color of the loading indicator modal */
-div.modalWindow.customModal {
+div.modalWindow.custom-modal {
     border-color: black;
 }
 /* Override the modal overlay with a higher opacity */
-div.modalOverlay.customOverlay {
+div.modalOverlay.custom-overlay {
     background: rgba(0, 0, 0, 0.7);
 }
 
