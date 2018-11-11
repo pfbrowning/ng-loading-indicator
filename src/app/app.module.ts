@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgLoadingIndicatorModule } from 'projects/ng-loading-indicator/src/public_api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule, MatButtonModule, MatCheckboxModule, MatTooltipModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -11,7 +13,12 @@ import { NgLoadingIndicatorModule } from 'projects/ng-loading-indicator/src/publ
   imports: [
     NgLoadingIndicatorModule,
     FormsModule,
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

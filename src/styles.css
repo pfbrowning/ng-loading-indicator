@@ -1,3 +1,7 @@
+/* Styles automatically added by Angular CLI when adding Angular Material to the project */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 /* In order to set basic styles that aren't already applied by
 the library, simply define your custom styles in a CSS class and
 then bind that class name to the corresponding input property */
@@ -21,19 +25,4 @@ div.modalWindow.custom-modal {
 /* Override the modal overlay with a higher opacity */
 div.modalOverlay.custom-overlay {
     background: rgba(0, 0, 0, 0.7);
-}
-
-/* Basic styling for our simple demo form */
-fieldset {
-    width:560px;
-    border:none;
-    line-height: 28px;
-}
-label {
-    clear: both;
-    float: left;
-    width: 470px;
-}
-input {
-    float: right;
 }

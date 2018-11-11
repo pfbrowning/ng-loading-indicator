@@ -1,20 +1,30 @@
+<mat-toolbar color="primary">
+  <span class="title">Loading Indicator Demo</span>
+  <span class="fill-remaining"></span>
+  <a mat-raised-button color="primary" href="https://pfbrowning.github.io/ng-loading-indicator/doc/" target="_blank">Documentation</a>
+  <a mat-raised-button color="primary" href="https://github.com/pfbrowning/ng-loading-indicator" target="_blank">Github</a>
+</mat-toolbar>
+
 <div style="text-align:center">
-  <h1>
+  <img width="200" alt="Angular Logo" src="assets/logo.svg">
+  <h1 class="mat-h1">
     Welcome to the ng-loading-indicator demo!
   </h1>
-  <img width="300" alt="Angular Logo" src="assets/logo.svg">
 </div>
 
-<fieldset>
-    <label for="applyStyles">Apply Custom Styles</label>
-    <input id="applyStyles" type="checkbox" [(ngModel)]="applyStyles">
-
-    <label for="load">Click to show the loading indicator for two seconds</label>
-    <input id="load" type="button" value="Load" (click)="show()" />
-
-    <label for="loadDifferent">Click to demonstrate changing the loading message</label>
-    <input id="loadDifferent" type="button" value="Load" (click)="showDifferentMessages()" />
-</fieldset>
+<section>
+  <ul class="action-list">
+    <li>
+      <mat-checkbox [(ngModel)]="applyStyles" matTooltip="Specify whether to use the out-of-the-box functionality with no extra styles or apply example styles">Custom Styles</mat-checkbox>
+    </li>
+    <li>
+      <button type="button" mat-raised-button color="primary" (click)="show()" matTooltip="Load for two seconds">Example 1</button>
+    </li>
+    <li>
+      <button type="button" mat-raised-button color="primary" (click)="showDifferentMessages()" matTooltip="Change the loading message before closing">Example 2</button>
+    </li>
+  </ul>
+</section>
 
 <!-- Based on whether the user selected the 'Apply Custom Styles' checkbox, use either
 a basic loading indicator component with no styles to demonstrate the out-of-the-box functionality
