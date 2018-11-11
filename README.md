@@ -28,11 +28,11 @@ any of its CSS classes you'll want to check those
 [upgrade notes](https://github.com/pfbrowning/ng-modal) as well.
 
 ## Installation
-1.  ng-loading-indicator depends on [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal).  Install them both:
+ng-loading-indicator depends on [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal).  Install them both:
 ```bash
 $ npm i @browninglogic/ng-loading-indicator @browninglogic/ng-modal --save
 ```
-2.  Import NgLoadingIndicatorModule and ModalManagerModule
+Then import NgLoadingIndicatorModule and ModalManagerModule
 ```typescript
 import { NgLoadingIndicatorModule } from '@browninglogic/ng-loading-indicator';
 import { ModalManagerModule } from '@browninglogic/ng-modal';
