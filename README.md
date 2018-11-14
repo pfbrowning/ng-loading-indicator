@@ -11,8 +11,8 @@
 
 ## Peer Dependencies
 * [@browninglogic/ng-modal](https://github.com/pfbrowning/ng-modal) (^4.0.0)
-* [@angular/common](https://www.npmjs.com/package/@angular/common) (^6.0.0)
-* [@angular/core](https://www.npmjs.com/package/@angular/core) (^6.0.0)
+* [@angular/common](https://www.npmjs.com/package/@angular/common) (^6.0.0 or ^7.0.0)
+* [@angular/core](https://www.npmjs.com/package/@angular/core) (^6.0.0 or ^7.0.0)
 
 The library has been tested with both Angular 6 and 7, so you should be fine with either.
 
