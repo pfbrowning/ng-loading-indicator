@@ -10,7 +10,7 @@ describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        ModalManagerModule, 
+        ModalManagerModule,
         NgLoadingIndicatorModule,
         FormsModule,
         MatToolbarModule,
@@ -25,7 +25,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
   it('should create a spy factory', async(() => {
-    let factory = LoadingIndicatorSpyFactories.CreateLoadingIndicatorServiceSpy();
+    const factory = LoadingIndicatorSpyFactories.CreateLoadingIndicatorServiceSpy();
     expect(factory).not.toBeNull();
     expect(factory).not.toBeUndefined();
     expect(factory.showLoadingIndicator).not.toHaveBeenCalled();
