@@ -1,7 +1,7 @@
 {
   "name": "@browninglogic/ng-loading-indicator",
-  "version": "2.0.2",
-  "description": "A simple, customizable, CSS-based loading indicator for Angular 6",
+  "version": "2.0.4",
+  "description": "A simple, customizable, CSS-based loading indicator for Angular 6 & 7",
   "keywords": [
     "ng",
     "angular",
