@@ -555,7 +555,7 @@ export class LoadingIndicatorComponent implements OnInit, OnDestroy {
   @Input() loadingMessageClass &#x3D; &#x27;&#x27;;
   /** Custom CSS class(es) to apply to the spinner*/
   @Input() spinnerClass &#x3D; &#x27;&#x27;;
-  @ViewChild(&#x27;loadingIndicatorModal&#x27;) loadingIndicatorModal: ModalWindowComponent;
+  @ViewChild(&#x27;loadingIndicatorModal&#x27;, { static: true }) loadingIndicatorModal: ModalWindowComponent;
   private _loadingMessage: string;
   private subLoadStarted: Subscription;
   private subLoadEnded: Subscription;
