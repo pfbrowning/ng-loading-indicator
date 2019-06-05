@@ -1,7 +1,7 @@
 {
   "name": "@browninglogic/ng-loading-indicator",
-  "version": "2.0.4",
-  "description": "A simple, customizable, CSS-based loading indicator for Angular 6 & 7",
+  "version": "3.0.0",
+  "description": "A simple, customizable, CSS-based loading indicator for Angular 8",
   "keywords": [
     "ng",
     "angular",
@@ -22,8 +22,8 @@
     "url": "https://github.com/pfbrowning/ng-loading-indicator/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^6.0.0 || ^7.0.0",
-    "@angular/core": "^6.0.0 || ^7.0.0",
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0",
     "@browninglogic/ng-modal": "^4.0.0"
   }
 }

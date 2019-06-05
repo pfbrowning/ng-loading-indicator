@@ -3,7 +3,8 @@ import { AppComponent } from './app.component';
 import { ModalManagerModule } from '@browninglogic/ng-modal';
 import { NgLoadingIndicatorModule } from '@browninglogic/ng-loading-indicator';
 import { LoadingIndicatorSpyFactories } from '@browninglogic/ng-loading-indicator/testing';
-import { MatToolbarModule, MatCheckboxModule } from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
 
 describe('AppComponent', () => {
