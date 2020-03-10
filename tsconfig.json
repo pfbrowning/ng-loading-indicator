@@ -24,6 +24,9 @@
       ],
       "@browninglogic/ng-loading-indicator/*": [
         "dist/ng-loading-indicator/*"
+      ],
+      "@browninglogic/ng-loading-indicator/testing": [
+        "projects/ng-loading-indicator/src/testing/index.spec"
       ]
     }
   }

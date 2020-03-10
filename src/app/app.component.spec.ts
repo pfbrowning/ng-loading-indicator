@@ -2,10 +2,10 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { ModalManagerModule } from '@browninglogic/ng-modal';
 import { NgLoadingIndicatorModule } from '@browninglogic/ng-loading-indicator';
-import { LoadingIndicatorSpyFactories } from '@browninglogic/ng-loading-indicator/testing';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
+import { createLoadingIndicatorServiceSpy } from '@browninglogic/ng-loading-indicator/testing';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -26,7 +26,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
   it('should create a spy factory', async(() => {
-    const factory = LoadingIndicatorSpyFactories.CreateLoadingIndicatorServiceSpy();
+    const factory = createLoadingIndicatorServiceSpy();
     expect(factory).not.toBeNull();
     expect(factory).not.toBeUndefined();
     expect(factory.showLoadingIndicator).not.toHaveBeenCalled();
