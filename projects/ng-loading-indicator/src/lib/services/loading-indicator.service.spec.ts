@@ -11,13 +11,13 @@ describe('LoadingIndicatorService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    loadingIndicatorService = TestBed.get(LoadingIndicatorService);
+    loadingIndicatorService = TestBed.inject(LoadingIndicatorService);
     loadStartedSpy = jasmine.createSpyObj('loadStarted', [ 'emit', 'error', 'complete' ]);
     loadEndedSpy = jasmine.createSpyObj('loadEnded', [ 'emit', 'error', 'complete' ]);
   });
 
   it('should be created', () => {
-    const service: LoadingIndicatorService = TestBed.get(LoadingIndicatorService);
+    const service: LoadingIndicatorService = TestBed.inject(LoadingIndicatorService);
     expect(service).toBeTruthy();
   });
 
