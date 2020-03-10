@@ -15,7 +15,7 @@
     "compodoc-move": "mv documentation dist/ng-loading-indicator-demo/doc",
     "ghpages-compodoc-build-push": "npm run ghpages-build && npm run compodoc-generate && npm run compodoc-move && npm run ghpages-publish",
     "build-prod": "ng build --prod --aot",
-    "build-lib": "rm -rf ./dist/ng-loading-indicator && ng build ng-loading-indicator",
+    "build-lib": "rm -rf ./dist/ng-loading-indicator && ng build ng-loading-indicator --prod",
     "test-library": "ng test ng-loading-indicator",
     "test-library-coverage": "ng test ng-loading-indicator --source-map --code-coverage=true",
     "build-test-library-coverage": "npm run build-prod && npm run test-library-coverage",
@@ -23,7 +23,8 @@
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "copy-readme": "cp README.md dist/ng-loading-indicator",
     "npm-pack": "cd dist/ng-loading-indicator && npm pack",
-    "package": "npm run build-lib && npm run copy-readme && npm run npm-pack"
+    "package": "npm run build-lib && npm run copy-readme && npm run npm-pack",
+    "npm-publish": "cd dist/ng-loading-indicator && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -54,6 +55,7 @@
     "@types/node": "^13.9.0",
     "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.2.1",
+    "compodoc": "0.0.41",
     "coveralls": "^3.0.9",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
